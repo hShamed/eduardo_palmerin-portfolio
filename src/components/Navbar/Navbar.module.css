@@ -1,0 +1,31 @@
+.navbar {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    z-index: 1000;
+    height: 6rem;
+    padding: 0 2.5rem;
+    border-bottom: 1px solid #ced4da;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.navbarTitle {
+    font-size: 2rem;
+}
+
+.navbarLink {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navbarUl {
+    display: flex;
+    width: 22vw;
+    justify-content: space-between;
+}
+
+.navbarItem {
+    font-size: 1.2rem;
+}
