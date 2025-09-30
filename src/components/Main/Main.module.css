@@ -7,7 +7,7 @@
     position: absolute;
     left: 2.5rem;
     width: 2px;
-    height: 100%;
+    height: 200%;
     background-color: #ced4da;
 }
 
@@ -15,66 +15,8 @@
     position: absolute;
     right: 0;
     width: 2.5rem;
-    height: 100%;
+    height: 200%;
     background-color: #000000;
-}
-
-.sectionNumber {
-    position: absolute;
-    left: 2rem;
-    margin-top: 4rem;
-    padding: 1rem 0;
-    background-color: #fff;
-    font-size: 1.2rem;
-    font-family: "Bebas Neue", sans-serif;
-}
-
-.row {
-    height: 79vh;
-    padding-left: 4rem;
-    display: flex;
-    align-items: center;
-}
-
-.col {
-    flex: 1;
-}
-
-.sectionTitle {
-    margin-bottom: 1rem;
-    font-size: 10rem;
-    font-family: "Bebas Neue", sans-serif;
-}
-
-.sectionSubtitle {
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-    font-family: "Bebas Neue", sans-serif;
-}
-
-.sectionButton {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 76%;
-    padding: 1rem;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #3676f0;
-    font-size: 1.6rem;
-    color: white;
-    font-family: 'Smooch Sans', sans-serif;
-}
-
-.icon {
-    width: 2rem;
-    height: 2rem;
-}
-
-.sectionImage {
-    width: 70%;
-    margin-left: 4rem;
 }
 
 .corner {
@@ -87,11 +29,72 @@
     border-bottom: 4.5rem solid #000000;
 }
 
-.splitline {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    margin-top: 4rem;
+
+/* Section  */
+
+.sectionWrapper {
+    margin: 4rem 0 0 -3rem;
+    padding: 0 0 8rem 3rem;
     background-color: #000;
+    color: #fff;
+}
+
+.sectionTitle {
+    margin-bottom: 1rem;
+    font-size: 8lh;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.sectionSubtitle {
+    margin-bottom: 2rem;
+    font-size: 1.8lh;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.sectionThirdTitle {
+    font-size: 3.5lh;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.sectionText {
+    margin-bottom: 3.8rem;
+    font-size: 1.4lh;
+}
+
+.sectionButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 76%;
+    padding: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #3676f0;
+    font-size: 1.5lh;
+    color: white;
+    font-family: 'Smooch Sans', sans-serif;
+}
+
+.sectionImage {
+    width: 100%;
+    max-height: 380px;
+
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 100%,
+        25% 100%,
+        0% 60%
+    );
+}
+
+.sectionImageAlt {
+    width: 70%;
+    margin-left: 4rem;
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
 }
