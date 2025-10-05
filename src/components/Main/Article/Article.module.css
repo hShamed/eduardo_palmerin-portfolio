@@ -1,0 +1,58 @@
+.articleContainer {
+    width: 22vw;
+    display: flex;
+    flex-direction: column;  
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 100%,
+        20% 100%,
+        0% 84%
+    );
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.articleContainer:hover {
+    transform: scale(1.02);
+}
+
+.articleImage {
+    width: 100%;
+    max-height: 330px;
+    flex: 1;
+}
+
+.articleTitle {
+    position: relative; 
+    padding: 1.5rem;
+    text-align: end;
+    background-color: rgb(0, 0, 0); 
+    font-size: 1.6lh;
+    font-family: "Bebas Neue", sans-serif;
+    color: #fff;
+}
+
+/* Flip Card Styles */
+
+.articleBackFace {
+    width: 80%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    background-color: #000000; 
+    color: white; 
+}
+
+.articleHeader {
+    font-size: 1.4lh;
+    margin-bottom: 1.5rem;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.articleActivity {
+    font-size: 1.2lh;
+    margin-bottom: 0.7rem;
+    font-family: 'Smooch Sans', sans-serif;
+}

@@ -1,6 +1,12 @@
+import Article from "./Article/Article";
 import Section from "./Section/Section";
+
 import styles from "./Main.module.css";
+
 import eduardoPic from "../../assets/images/eduardo_pic.webp";
+import kobelcoPic from "../../assets/images/kobelco_pic.webp";
+import paileraPic from "../../assets/images/pailera_pic.webp";
+
 import { ClipboardDocumentIcon } from '@heroicons/react/24/outline';
 
 const Main = () => {
@@ -57,6 +63,61 @@ const Main = () => {
                     }
                 />
             </div>
+
+            <Section 
+                number="03"
+                firstColContent={
+                    <>
+                        <h3 className={styles.sectionSubtitle}>Experiencia</h3>
+                        <h4 className={styles.sectionThirdTitle}>+2 años</h4>
+                    </>
+                }
+                secondRowContent={
+                    <>
+                        <Article 
+                            img={paileraPic}
+                            alt="Pailera Picture"
+                            title="Soldadura y Fabricación Industrial (Pailera)"
+                            dates="Septiembre, 2022 a Junio, 2023"
+                            activities={[
+                                "Corte y Grabado laser",
+                                "Toma de medidas de maquinaria y desarrollo de planos industriales",
+                                "Implementación de soluciones tecnológicas avanzadas",
+                                "Cumplimiento de normas y reglamentos técnicos",
+                                "0 no conformidades en auditorías internas y externas durante 10 meses consecutivos",
+                                "Dominio sobre AutoCAD y modelado 3D de objetos(Autodesk Inventor)",
+                            ]}
+                        />
+                        <Article 
+                            img={kobelcoPic}
+                            alt="KOBELCO Picture"
+                            title="Gil maquinaria SA. de CV. / KOBELCO"
+                            dates="Julio de 2024 - Diciembre de 2024 "
+                            activities={[
+                                "Desarrollo de calendario/agenda de servicios mensuales con bases de datos",
+                                "Desarrollo de manuales de tiempos estimados/actividades administrativas",
+                                "Generación de Checklist de levantamiento de necesidades de refacciones",
+                                "Creación de manuales de puestos administrativos",
+                                "Reducción del 12% en siniestros no asegurados",
+                            ]}
+                        />
+                        <Article 
+                            img={paileraPic}
+                            alt="RODELA Picture"
+                            title="RODELAC ELECTROMECANICA INDUSTRIAL"
+                            dates="Julio de 2025 - Presente"
+                            activities={[
+                                "Dibujo, diseño y modelado 3D de planos eléctricos",
+                                "Desarrollo de manuales de uso de sistema eléctrico",
+                                "Gestión de personal en planta",
+                                "Vectorizado de logo",
+                                "Creación de manuales de uso de sistema eléctrico de planta",
+                                "Termino de proyecto un mes antes de la fecha estimada",
+                            ]}
+                        />
+                    </>
+                }
+            />
             
         </main>
     )

@@ -13,9 +13,19 @@
 }
 
 .sectionRow {
-    height: 68vh;
-    padding: 4.8rem 0rem 0 4rem;
+    height: auto;
+    padding-left: 4.8rem;
+    padding-bottom: 3.3rem;
     display: flex;
+}
+
+.sectionFirstRow {
+    height: auto;
+    padding-top: 4.5rem;
+}
+
+.sectionSecondRow {
+    justify-content: space-around;
 }
 
 .sectionCol {
