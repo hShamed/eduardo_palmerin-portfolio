@@ -1,5 +1,5 @@
 import Article from "./Article/Article";
-import Section from "./Section/Section";
+import Section from "../Section/Section";
 
 import styles from "./Main.module.css";
 
@@ -20,7 +20,7 @@ const Main = () => {
                 firstColContent={
                     <>
                         <h1 className={styles.sectionTitle}>Eduardo Palmerin</h1>
-                        <h3 className={styles.sectionSubtitle}>Ingeniero Industrial | Diseñador Industrial</h3>
+                        <h3>Ingeniero Industrial | Diseñador Industrial</h3>
                         <button className={styles.sectionButton}>
                             palmerinlopezeduardo@gmail.com
                             <ClipboardDocumentIcon className={styles.icon} />
@@ -42,8 +42,8 @@ const Main = () => {
                     number="02"
                     firstColContent={
                         <>
-                            <h3 className={styles.sectionSubtitle}>Acerca de mí</h3>
-                            <h4 className={styles.sectionThirdTitle}>Experto en diseño CAD y gestión de calidad</h4>
+                            <h3>Acerca de mí</h3>
+                            <h4>Experto en diseño CAD y gestión de calidad</h4>
                         </>
                     }
                     secondColContent={
@@ -68,8 +68,8 @@ const Main = () => {
                 number="03"
                 firstColContent={
                     <>
-                        <h3 className={styles.sectionSubtitle}>Experiencia</h3>
-                        <h4 className={styles.sectionThirdTitle}>+2 años</h4>
+                        <h3>Experiencia</h3>
+                        <h4>+2 años</h4>
                     </>
                 }
                 secondRowContent={
@@ -118,7 +118,6 @@ const Main = () => {
                     </>
                 }
             />
-            
         </main>
     )
 }

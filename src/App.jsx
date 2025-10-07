@@ -3,6 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 // Components
 import Navbar from "./components/Navbar/Navbar";
 import Main from "./components/Main/Main";
+import Footer from './components/Footer/Footer';
 
 function App() {
   const CURSOR_SIZE = 30;
@@ -81,6 +82,7 @@ function App() {
       <div style={cursorStyle}></div>
       <Navbar />
       <Main />
+      <Footer />
     </>
   )
 }

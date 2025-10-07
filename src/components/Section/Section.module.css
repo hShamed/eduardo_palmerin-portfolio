@@ -6,9 +6,10 @@
     position: absolute;
     left: 2rem;
     margin-top: 4rem;
-    padding: 1rem 0;
+    padding: 1rem 0.2rem;
     background-color: #3676f0;
     font-size: 1.2rem;
+    color: #fff;
     font-family: "Bebas Neue", sans-serif;
 }
 
@@ -31,4 +32,15 @@
 .sectionCol {
     padding-right: 4rem;
     flex: 1;
+}
+
+h3 {
+    margin-bottom: 2rem;
+    font-size: 1.8lh;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+h4 {
+    font-size: 3.5lh;
+    font-family: "Bebas Neue", sans-serif;
 }

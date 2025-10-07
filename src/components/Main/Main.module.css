@@ -5,6 +5,7 @@
 
 .timeline {
     position: absolute;
+    top: 11rem;
     left: 2.5rem;
     width: 2px;
     height: 300%;
@@ -45,17 +46,6 @@
     font-family: "Bebas Neue", sans-serif;
 }
 
-.sectionSubtitle {
-    margin-bottom: 2rem;
-    font-size: 1.8lh;
-    font-family: "Bebas Neue", sans-serif;
-}
-
-.sectionThirdTitle {
-    font-size: 3.5lh;
-    font-family: "Bebas Neue", sans-serif;
-}
-
 .sectionText {
     margin-bottom: 3.8rem;
     font-size: 1.4lh;
@@ -67,7 +57,7 @@
     align-items: center;
     width: 76%;
     padding: 1rem;
-    cursor: pointer;
+    cursor: none;
     border: none;
     border-radius: 5px;
     background-color: #3676f0;
