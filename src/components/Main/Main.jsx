@@ -1,4 +1,5 @@
 import Article from "./Article/Article";
+import Button from "../Button/Button";
 import Section from "../Section/Section";
 
 import styles from "./Main.module.css";
@@ -9,7 +10,7 @@ import paileraPic from "../../assets/images/pailera_pic.webp";
 
 import { ClipboardDocumentIcon } from '@heroicons/react/24/outline';
 
-const Main = () => {
+const Main = ({ onMouseEnter, onMouseLeave }) => {
     return (
         <main className={styles.main}>
             <aside className={styles.timeline}></aside>
@@ -21,10 +22,13 @@ const Main = () => {
                     <>
                         <h1 className={styles.sectionTitle}>Eduardo Palmerin</h1>
                         <h3>Ingeniero Industrial | Diseñador Industrial</h3>
-                        <button className={styles.sectionButton}>
-                            palmerinlopezeduardo@gmail.com
-                            <ClipboardDocumentIcon className={styles.icon} />
-                        </button>
+                        <Button 
+                            onEnter={onMouseEnter} 
+                            onLeave={onMouseLeave} 
+                            color="primary"
+                            text="palmerinlopezeduardo@gmail.com"
+                            icon={<ClipboardDocumentIcon />}
+                        />
                     </>
                 }
                 secondColContent={

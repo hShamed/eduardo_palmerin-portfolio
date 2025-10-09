@@ -1,7 +1,9 @@
+import Button from '../Button/Button';
 import Section from '../Section/Section';
+
 import styles from './Footer.module.css';
 
-const Footer = () => {
+const Footer = ({ onMouseEnter, onMouseLeave }) => {
     return (
         <footer className={styles.footer}>
             <Section 
@@ -11,18 +13,19 @@ const Footer = () => {
                         <h3>Contacto</h3>
                         <h4>¿Tienes curiosidad sobre qué podemos crear juntos?</h4> 
                         <div className={styles.contactContainer}>
-                            <a 
-                                href="mailto:palmerinlopezeduardo@gmail.com" 
-                                className={styles.contactLink}
-                            >
-                                Ponerse en contacto
-                            </a>
-                            <p className={styles.availableText}>
+                            <Button
+                                onEnter={onMouseEnter} 
+                                onLeave={onMouseLeave} 
+                                color="secondary"
+                                text="Ponerse en contacto"
+                                href="mailto:palmerinlopezeduardo@gmail.com"
+                            />
+                            <div className={styles.availableText}>
                                 <div className={styles.sonarContainer}>
                                     <span className={styles.sonar}></span>
                                 </div>
                                 Disponible para trabajar
-                            </p>
+                            </div>
                         </div>
 
                     </>

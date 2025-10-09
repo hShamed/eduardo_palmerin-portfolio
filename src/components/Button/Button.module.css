@@ -1,0 +1,65 @@
+.button {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    gap: 4rem;
+    cursor: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-family: 'Smooch Sans', sans-serif;
+
+    transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+.buttonColorPrimary {
+    background-color: #3676f0;
+    color: white;
+}
+
+.buttonColorSecondary {
+    background-color: #fff;
+    color: #000
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.notification {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background-color: #3676f0;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    z-index: 1000;
+    animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}

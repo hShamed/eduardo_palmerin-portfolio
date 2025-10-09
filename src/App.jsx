@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 // Components
 import Navbar from "./components/Navbar/Navbar";
@@ -16,6 +16,9 @@ function App() {
     setPosition({ x: e.clientX, y: e.clientY });
   }, []);
 
+  const handleMouseEnter = useCallback(() => setIsHovering(true), []);
+  const handleMouseLeave = useCallback(() => setIsHovering(false), []);
+
   useEffect(() => {
     window.addEventListener('mousemove', handleMouseMove);
 
@@ -24,51 +27,26 @@ function App() {
     };
   }, [handleMouseMove]);
 
-  const handleMouseEnter = () => setIsHovering(true);
-  const handleMouseLeave = () => setIsHovering(false);
-
-  useEffect(() => {
-    const interactiveElements = document.querySelectorAll('[data-interactive="true"]');
-    
-    interactiveElements.forEach(el => {
-      el.addEventListener('mouseenter', handleMouseEnter);
-      el.addEventListener('mouseleave', handleMouseLeave);
-    });
-
-    return () => {
-      interactiveElements.forEach(el => {
-        el.removeEventListener('mouseenter', handleMouseEnter);
-        el.removeEventListener('mouseleave', handleMouseLeave);
-      });
-    };
-  }, []);
-
-  // Styles for the custom cursor, including the powerful backdrop-filter
   const cursorStyle = {
     position: 'fixed',
     top: 0,
     left: 0,
-    // Size and Shape (w-8 h-8, rounded-full)
+
     width: `${CURSOR_SIZE}px`,
     height: `${CURSOR_SIZE}px`,
     borderRadius: '50%',
     
-    // Z-Index and Interaction
     pointerEvents: 'none',
     zIndex: 9999,
     
-    // Transition for smooth movement and scaling (duration-200 ease-out)
     transition: 'all 200ms ease-out',
     
-    // Position the filter circle precisely at the mouse tip.
     transform: `translate3d(${position.x - CURSOR_OFFSET}px, ${position.y - CURSOR_OFFSET}px, 0) ${isHovering ? 'scale(2)' : 'scale(1)'}`,
     
-    // Background (bg-white/5 or bg-yellow-300/30 on hover)
     backgroundColor: isHovering 
       ? 'rgba(253, 224, 71, 0.3)' 
       : 'rgba(255, 255, 255, 0.05)',
     
-    // --- The Magic: Backdrop Filter for X-Ray/Inversion ---
     backdropFilter: isHovering 
       ? 'invert(1) contrast(1.5) blur(4px)' 
       : 'invert(1) contrast(1.2) blur(1px)',
@@ -81,8 +59,14 @@ function App() {
     <>
       <div style={cursorStyle}></div>
       <Navbar />
-      <Main />
-      <Footer />
+      <Main 
+        onMouseEnter={handleMouseEnter} 
+        onMouseLeave={handleMouseLeave} 
+      />
+      <Footer 
+        onMouseEnter={handleMouseEnter} 
+        onMouseLeave={handleMouseLeave} 
+      />
     </>
   )
 }

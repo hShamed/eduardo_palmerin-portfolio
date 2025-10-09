@@ -5,10 +5,10 @@
 
 .timeline {
     position: absolute;
-    top: 11rem;
+    top: 16rem;
     left: 2.5rem;
     width: 2px;
-    height: 300%;
+    height: 315%;
     background-color: #ced4da;
 }
 
@@ -16,7 +16,7 @@
     position: absolute;
     right: 0;
     width: 2.5rem;
-    height: 300%;
+    height: 315%;
     background-color: #000000;
 }
 
@@ -51,21 +51,6 @@
     font-size: 1.4lh;
 }
 
-.sectionButton {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 76%;
-    padding: 1rem;
-    cursor: none;
-    border: none;
-    border-radius: 5px;
-    background-color: #3676f0;
-    font-size: 1.5lh;
-    color: white;
-    font-family: 'Smooch Sans', sans-serif;
-}
-
 .sectionImage {
     width: 100%;
     max-height: 380px;
@@ -81,9 +66,4 @@
 .sectionImageAlt {
     width: 70%;
     margin-left: 4rem;
-}
-
-.icon {
-    width: 2rem;
-    height: 2rem;
 }
