@@ -5,7 +5,7 @@
 .sectionNumber {
     position: absolute;
     left: 2rem;
-    margin-top: 8.5rem;
+    margin-top: 7rem;
     padding: 1rem 0.2rem;
     background-color: #3676f0;
     font-size: 1.2rem;
@@ -22,7 +22,7 @@
 
 .sectionFirstRow {
     height: auto;
-    padding-top: 10rem;
+    padding-top: 7.8rem;
 }
 
 .sectionSecondRow {

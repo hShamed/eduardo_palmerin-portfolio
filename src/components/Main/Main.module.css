@@ -5,10 +5,10 @@
 
 .timeline {
     position: absolute;
-    top: 16rem;
+    top: 15rem;
     left: 2.5rem;
     width: 2px;
-    height: 315%;
+    height: 150rem;
     background-color: #ced4da;
 }
 
