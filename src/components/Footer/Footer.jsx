@@ -62,7 +62,7 @@ const Footer = ({ onMouseEnter, onMouseLeave }) => {
                 }
             />
             <div className={styles.footerBottom}>
-                <p>Diseñada y desarrollada por Hiram Ambriz</p>
+                <p>Diseñada y desarrollada por <a href="https://hiram-ambriz.vercel.app/">Hiram Ambriz</a></p>
                 <p>Eduardo Palmerin © 2025</p>
             </div> 
         </footer>

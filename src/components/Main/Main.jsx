@@ -4,9 +4,11 @@ import Section from "../Section/Section";
 
 import styles from "./Main.module.css";
 
+import aboutPic from "../../assets/images/about_pic.webp";
 import eduardoPic from "../../assets/images/eduardo_pic.webp";
 import kobelcoPic from "../../assets/images/kobelco_pic.webp";
 import paileraPic from "../../assets/images/pailera_pic.webp";
+import rodelacPic from "../../assets/images/rodelac_pic.webp";
 
 import { ClipboardDocumentIcon } from '@heroicons/react/24/outline';
 
@@ -60,7 +62,7 @@ const Main = ({ onMouseEnter, onMouseLeave }) => {
                             </p>
                             <img 
                                 className={styles.sectionImage}
-                                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.quarrymagazine.com%2Fwp-content%2Fuploads%2F2022%2F09%2FDSC_1261-scaled.jpg&f=1&nofb=1&ipt=84d8151ec0ff6e8ad06685debbf512e8cdfa37565868a4cfded64cccf7a90b5b"
+                                src={aboutPic}
                                 alt="Eduardo Palmerin Picture"
                             />
                         </>
@@ -106,8 +108,8 @@ const Main = ({ onMouseEnter, onMouseLeave }) => {
                             ]}
                         />
                         <Article 
-                            img={paileraPic}
-                            alt="RODELA Picture"
+                            img={rodelacPic}
+                            alt="RODELAC Picture"
                             title="RODELAC ELECTROMECANICA INDUSTRIAL"
                             dates="Julio de 2025 - Presente"
                             activities={[

@@ -95,3 +95,8 @@
     padding-right: 4rem;
     opacity: 0.8;
 }
+
+.footerBottom a {
+    font-weight: 700;
+    color: #fff;
+}
