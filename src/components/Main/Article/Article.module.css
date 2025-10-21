@@ -56,3 +56,26 @@
     margin-bottom: 0.7rem;
     font-family: 'Smooch Sans', sans-serif;
 }
+
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .articleContainer {
+        width: 98%;
+        margin-bottom: 3rem;
+    }
+
+    .articleTitle {
+        font-size: 1.2lh;
+    }
+
+    .articleHeader {
+        font-size: 1.2lh;
+    }
+
+    .articleActivity {
+        font-size: 1lh;
+    }
+}

@@ -67,3 +67,45 @@
     width: 70%;
     margin-left: 4rem;
 }
+
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .main {
+        width: 80%;
+        padding: 0rem 1.9rem;
+    }
+
+    .timeline {
+        top: 15rem;
+        height: 208rem;
+    }
+
+    .borderline {
+        width: 2rem;
+        height: 500%;
+    }
+
+    .corner {
+        right: 2rem;
+    }
+
+    .sectionWrapper {
+        width: 90vw;
+    }
+
+    .sectionTitle {
+        font-size: 4lh;
+    }
+    
+    .sectionText {
+        font-size: 1lh;
+    }
+
+    .sectionImageAlt {
+        width: 88%;
+        margin-left: 0rem;
+    }
+}

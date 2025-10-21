@@ -30,3 +30,23 @@
 .navbarItem {
     font-size: 1.4lh;
 }
+
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    
+    .navbar {
+        height: 5rem;
+        padding: 0 1.8rem;
+    }
+
+    .navbarTitle {
+        font-size: 1.8lh;
+    }
+
+    .navbarUl {
+        display: none;
+    }
+}
