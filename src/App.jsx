@@ -11,6 +11,7 @@ function App() {
 
   const [position, setPosition] = useState({ x: -100, y: -100 });
   const [isHovering, setIsHovering] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const handleMouseMove = useCallback((e) => {
     setPosition({ x: e.clientX, y: e.clientY });
@@ -20,12 +21,27 @@ function App() {
   const handleMouseLeave = useCallback(() => setIsHovering(false), []);
 
   useEffect(() => {
-    window.addEventListener('mousemove', handleMouseMove);
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isMobile) {
+      window.addEventListener('mousemove', handleMouseMove);
+    }
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, [handleMouseMove]);
+  }, [handleMouseMove, isMobile]);
 
   const cursorStyle = {
     position: 'fixed',
@@ -57,7 +73,7 @@ function App() {
 
   return (
     <>
-      <div style={cursorStyle}></div>
+      {!isMobile && <div style={cursorStyle}></div>}
       <Navbar />
       <Main 
         onMouseEnter={handleMouseEnter} 
