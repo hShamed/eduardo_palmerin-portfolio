@@ -46,6 +46,13 @@
     font-family: "Bebas Neue", sans-serif;
 }
 
+.sectionTextWrapper {
+    position: relative;
+    overflow: hidden;
+    height: 3.2rem;
+    padding-top: 0.5rem;
+}
+
 .sectionText {
     margin-bottom: 3.8rem;
     font-size: 1.4lh;
@@ -68,6 +75,40 @@
     margin-left: 4rem;
 }
 
+.sectionSlideText {
+    position: absolute;
+}
+
+.slideIn {
+    animation: slideIn 0.5s ease forwards;
+}
+
+.slideOut {
+    animation: slideOut 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(150%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-150%);
+        opacity: 0;
+    }
+}
+
 
 
 /* Responsive Design */
@@ -80,7 +121,7 @@
 
     .timeline {
         top: 15rem;
-        height: 208rem;
+        height: 202rem;
     }
 
     .borderline {

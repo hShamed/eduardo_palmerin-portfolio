@@ -1,6 +1,11 @@
 import styles from "./Section.module.css";
 
 const Section = ({ number, firstColContent, secondColContent, secondRowContent }) => {
+
+    if (secondColContent) {
+        secondColContent = <div className={styles.sectionCol}>{secondColContent}</div>;
+    }
+
     return (
         <section id={"sectionNumber" + number} className={styles.section}>
             <p className={styles.sectionNumber}>{number}</p>
@@ -8,9 +13,7 @@ const Section = ({ number, firstColContent, secondColContent, secondRowContent }
                 <div className={styles.sectionCol}>
                     {firstColContent}
                 </div>
-                <div className={styles.sectionCol}>
-                    {secondColContent}
-                </div>
+                {secondColContent}
             </div>
             <div className={`${styles.sectionRow} ${styles.sectionSecondRow}`}>
                 {secondRowContent}

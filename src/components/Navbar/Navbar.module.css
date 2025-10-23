@@ -31,6 +31,66 @@
     font-size: 1.4lh;
 }
 
+.navbarBtnIcon {
+    display: none;
+}
+
+.navbarIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* Modal styles */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modalOpen {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modalCloseBtn {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.modalMenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.modalMenuItem {
+    margin: 2.5rem 0;
+}
+
+.modalMenuLink {
+    font-size: 1.8lh;
+    color: #000;
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+}
+
 
 
 /* Responsive Design */
@@ -48,5 +108,12 @@
 
     .navbarUl {
         display: none;
+    }
+
+    .navbarBtnIcon {
+        display: flex;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
     }
 }

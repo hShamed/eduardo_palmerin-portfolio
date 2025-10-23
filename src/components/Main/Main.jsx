@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from "react";
+
 import Article from "./Article/Article";
 import Button from "../Button/Button";
 import Section from "../Section/Section";
@@ -13,6 +15,17 @@ import rodelacPic from "../../assets/images/rodelac_pic.webp";
 import { ClipboardDocumentIcon } from '@heroicons/react/24/outline';
 
 const Main = ({ onMouseEnter, onMouseLeave }) => {
+    const [currentText, setCurrentText] = useState(0);
+    const texts = ["Ingeniero Industrial", "Diseñador Industrial"];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentText((prev) => (prev + 1) % texts.length); // Cycle through texts
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <main className={styles.main}>
             <aside className={styles.timeline}></aside>
@@ -23,7 +36,18 @@ const Main = ({ onMouseEnter, onMouseLeave }) => {
                 firstColContent={
                     <>
                         <h1 className={styles.sectionTitle}>Eduardo Palmerin</h1>
-                        <h3>Ingeniero Industrial | Diseñador Industrial</h3>
+                        <div className={styles.sectionTextWrapper}>
+                            {texts.map((text, index) => (
+                                <h3 
+                                    key={index}
+                                    className={`${styles.sectionSlideText} ${
+                                        currentText === index ? styles.slideIn : styles.slideOut
+                                    }`}
+                                >
+                                    {text}
+                                </h3>
+                            ))}
+                        </div>
                         <Button 
                             onEnter={onMouseEnter} 
                             onLeave={onMouseLeave} 
